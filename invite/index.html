@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>فانوسِ علم — دعوتی کوڈ | Fanoos e Ilm Invite</title>
+<meta name="description" content="Fanoos e Ilm invite — enter the code, complete the Daily Challenge, both earn 5,000 coins." />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: "Noto Nastaliq Urdu", "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(180deg, #04220f 0%, #06351f 55%, #0a4f3a 100%);
+    color: #fff8e7; min-height: 100vh;
+  }
+  .wrap { max-width: 520px; margin: 0 auto; padding: 18px 14px 28px; }
+  header { text-align: center; }
+  header img { width: 92px; height: 92px; border-radius: 50%; border: 2.5px solid #e7c65a; background: #06351f; object-fit: cover; }
+  header h1 { margin: 8px 0 0; font-size: 27px; line-height: 1.9; color: #ffe98f; }
+  header .brand { margin: 0; font-family: Georgia, serif; font-size: 14px; letter-spacing: 2px; color: #e7c65a; text-transform: uppercase; }
+  .open-app {
+    display: block; text-align: center; text-decoration: none; cursor: pointer;
+    background: linear-gradient(180deg, #f3cd6b, #c9a227); color: #231a04;
+    font-size: 19px; font-weight: 800; line-height: 1.8;
+    border: 2px solid #ffe98a; border-radius: 16px; padding: 8px 12px 10px; margin: 16px 0 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,.4);
+  }
+  .open-app small { display: block; font-family: Georgia, serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+  .card {
+    background: #fffdf6; color: #2b2118; border: 2px solid #e7c65a; border-radius: 18px;
+    padding: 14px 16px 16px; margin: 0 0 12px; text-align: center;
+    box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  }
+  .card .lab { font-size: 14.5px; font-weight: 700; color: #7a6414; line-height: 1.9; }
+  .card .lab span { font-family: Georgia, serif; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .code {
+    font-family: Georgia, "Courier New", serif; direction: ltr; unicode-bidi: embed;
+    font-size: 32px; font-weight: 800; letter-spacing: 2.5px; color: #0a4f3a; line-height: 1.35; margin: 2px 0 8px;
+    word-break: break-all;
+  }
+  .copy-btn {
+    font-family: inherit; cursor: pointer; border: none; border-radius: 999px;
+    background: linear-gradient(180deg, #12805c, #0a4f3a); color: #ffeec2;
+    font-size: 15.5px; font-weight: 700; line-height: 1.8; padding: 3px 26px 6px;
+  }
+  .copy-btn:active { filter: brightness(1.15); }
+  .reward {
+    text-align: center; font-size: 16.5px; font-weight: 800; line-height: 1.9; color: #ffe98f;
+    border: 1.6px dashed #e7c65a; border-radius: 14px; padding: 6px 12px 8px; margin: 0 0 14px;
+    background: rgba(231,198,90,.08);
+  }
+  .reward span { font-family: Georgia, serif; font-size: 13.5px; }
+  h2.steps-t { text-align: center; font-size: 19px; line-height: 1.9; color: #ffe98f; margin: 10px 0 6px; }
+  ol.steps { list-style: none; counter-reset: st; margin: 0 0 6px; padding: 0; }
+  ol.steps li {
+    counter-increment: st; position: relative;
+    background: rgba(255,253,246,.07); border: 1.4px solid rgba(231,198,90,.45); border-radius: 14px;
+    padding: 9px 44px 11px 12px; margin: 0 0 8px; font-size: 15.5px; line-height: 1.95;
+  }
+  ol.steps li::before {
+    content: counter(st); position: absolute; inset-inline-start: 10px; top: 10px;
+    width: 26px; height: 26px; border-radius: 50%; text-align: center;
+    background: radial-gradient(circle at 35% 30%, #ffe98a, #c9a227 75%); color: #231a04;
+    font-family: Georgia, serif; font-weight: 800; font-size: 15px; line-height: 26px;
+  }
+  .en { direction: ltr; text-align: left; font-family: Georgia, "Segoe UI", serif; }
+  .en li { padding: 9px 12px 11px 44px; line-height: 1.55; font-size: 14.5px; }
+  .en li::before { inset-inline-start: 10px; }
+  .generic p { font-size: 15.5px; line-height: 2; margin: 4px 0; }
+  footer { text-align: center; margin-top: 14px; font-size: 13px; color: rgba(255,238,194,.75); line-height: 1.9; }
+  footer b { color: #e7c65a; font-family: Georgia, serif; letter-spacing: 1px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo.webp" alt="AM Writes" />
+    <h1>فانوسِ علم</h1>
+    <p class="brand">Fanoos e Ilm — AM Writes</p>
+  </header>
+
+  <a class="open-app" id="openAppBtn" href="#">
+    ایپ کھولیں
+    <small>OPEN THE APP</small>
+  </a>
+
+  <div class="card" id="codeCard" hidden>
+    <div class="lab">آپ کا دعوتی کوڈ — <span>Your invite code</span></div>
+    <div class="code" id="codeText">FANOOS-000000</div>
+    <button class="copy-btn" id="copyBtn" type="button">کوڈ کاپی کریں — Copy</button>
+  </div>
+
+  <div class="card generic" id="genericCard" hidden>
+    <p>آپ کو فانوسِ علم کھیلنے کی دعوت ملی ہے!</p>
+    <p class="en" style="text-align:center">You have been invited to play Fanoos e Ilm!<br />Ask your friend for their invite code, then follow the steps below.</p>
+  </div>
+
+  <div class="reward">دونوں کو 5,000 سکے ملیں گے!<br /><span>BOTH EARN 5,000 COINS</span></div>
+
+  <h2 class="steps-t">طریقہ — تین آسان مراحل</h2>
+  <ol class="steps">
+    <li>فانوسِ علم ایپ انسٹال کریں اور کھولیں۔</li>
+    <li>پہلی بار لاگ ان ہونے کے 48 گھنٹوں کے اندر یہ دعوتی کوڈ سیٹنگز میں لکھیں۔</li>
+    <li>روزانہ چیلنج مکمل کریں (ایک دن میں 50 درست جواب) — آپ کو بھی 5,000 سکے اور آپ کے دوست کو بھی 5,000 سکے ملیں گے۔</li>
+  </ol>
+
+  <h2 class="steps-t en" style="text-align:center">How it works — 3 easy steps</h2>
+  <ol class="steps en">
+    <li>Install and open the Fanoos e Ilm app.</li>
+    <li>Enter this invite code in Settings within 48 hours of your first login.</li>
+    <li>Complete the Daily Challenge (50 correct answers in a day) — you earn 5,000 coins and your friend earns 5,000 coins too.</li>
+  </ol>
+
+  <footer>بشکریہ <b>AM WRITES</b><br />Fanoos e Ilm — Islamic Quiz App</footer>
+</div>
+
+<script>
+(function () {
+  var m = /[?&]c=([A-Za-z0-9-]{4,24})/.exec(location.search || "");
+  var code = m ? m[1].toUpperCase() : "";
+  var valid = /^FANOOS-[A-Z0-9]{4,8}$/.test(code);
+  if (!valid) code = "";
+  var base = "https://asifmehmoodpk.github.io/fanoos-audio/invite/";
+  var landing = base + (code ? "?c=" + encodeURIComponent(code) : "");
+  var intent = "intent://asifmehmoodpk.github.io/fanoos-audio/invite/"
+    + (code ? "?c=" + encodeURIComponent(code) : "")
+    + "#Intent;scheme=https;package=com.amwrites.fanoos;S.browser_fallback_url="
+    + encodeURIComponent(landing) + ";end";
+  document.getElementById("openAppBtn").setAttribute("href", intent);
+  if (code) {
+    document.getElementById("codeText").textContent = code;
+    document.getElementById("codeCard").hidden = false;
+    var btn = document.getElementById("copyBtn");
+    btn.addEventListener("click", function () {
+      function done() { btn.textContent = "کاپی ہو گیا ✓ — Copied ✓"; setTimeout(function () { btn.textContent = "کوڈ کاپی کریں — Copy"; }, 2200); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(done, function () { fallback(); });
+      } else fallback();
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = code; ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  } else {
+    document.getElementById("genericCard").hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
