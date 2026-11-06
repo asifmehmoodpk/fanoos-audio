@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.amwrites.fanoos",
+      "sha256_cert_fingerprints": ["49:B5:79:16:73:0C:5E:18:39:27:80:B2:48:ED:88:76:CB:61:26:72:F8:FF:94:4B:94:5F:B9:29:F6:DB:6D:31"]
+    }
+  }
+]
