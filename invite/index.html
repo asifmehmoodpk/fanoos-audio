@@ -10,17 +10,17 @@
   body {
     margin: 0; font-family: "Noto Nastaliq Urdu", "Segoe UI", Tahoma, sans-serif;
     background:
-      radial-gradient(ellipse 90% 46% at 50% -6%, rgba(231,198,90,.25), rgba(231,198,90,0) 62%),
-      linear-gradient(180deg, #1d0b33 0%, #2e1065 55%, #3d1470 100%);
+      radial-gradient(ellipse 90% 46% at 50% -6%, rgba(255,233,143,.35), rgba(255,233,143,0) 62%),
+      linear-gradient(180deg, #3d2a04 0%, #6e5010 58%, #8a6410 100%);
     color: #fff8e7; min-height: 100vh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 16px 14px;
   }
   /* ——— Branding line: small logo, letterspaced serif name between gold rules ——— */
   .brand { display: flex; align-items: center; gap: 10px; direction: ltr; margin: 0 0 6px; }
-  .brand img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #e7c65a; background: #2e1065; object-fit: cover; box-shadow: 0 0 0 3px rgba(231,198,90,.18), 0 4px 12px rgba(0,0,0,.4); }
+  .brand img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #e7c65a; background: #6e5010; object-fit: cover; box-shadow: 0 0 0 3px rgba(231,198,90,.18), 0 4px 12px rgba(0,0,0,.4); }
   .brand .name { font-family: Georgia, "Times New Roman", serif; font-size: 16.5px; font-weight: 700; letter-spacing: 2.2px; color: #ffe98f; white-space: nowrap; text-shadow: 0 1px 8px rgba(0,0,0,.55); }
-  .brand-line { display: flex; align-items: center; gap: 8px; direction: ltr; margin: 0 0 15px; color: #e7c65a; }
+  .brand-line { display: flex; align-items: center; gap: 8px; direction: ltr; margin: 0 0 10px; color: #e7c65a; }
   .brand-line i { display: block; width: 58px; height: 1px; background: linear-gradient(90deg, rgba(231,198,90,0), #e7c65a); }
   .brand-line i:last-child { background: linear-gradient(90deg, #e7c65a, rgba(231,198,90,0)); }
   .brand-line b { font-size: 10px; font-weight: 400; line-height: 1; }
@@ -29,8 +29,15 @@
     width: 100%; max-width: 480px; position: relative;
     background: linear-gradient(180deg, #fffef9, #fdf6df);
     color: #2b2118; border: 2px solid #e7c65a; border-radius: 18px;
-    padding: 16px 18px 18px; text-align: center;
+    padding: 14px 18px 16px; text-align: center;
     box-shadow: 0 14px 34px rgba(0,0,0,.45), inset 0 0 0 5px #fffdf6, inset 0 0 0 6px rgba(201,162,39,.35);
+  }
+  /* ——— Mascot medallion at the top of the strip ——— */
+  .strip .mascot {
+    display: block; width: 96px; height: 96px; margin: 0 auto 2px;
+    border-radius: 50%; object-fit: cover; object-position: 50% 50%;
+    border: 3px solid #e7c65a; background: #14100c;
+    box-shadow: 0 0 0 3px rgba(201,162,39,.30), 0 6px 16px rgba(0,0,0,.30);
   }
   .strip .title {
     margin: 0; font-size: 25px; font-weight: 700; line-height: 1.8; color: #0a4f3a;
@@ -44,7 +51,7 @@
     font-size: 35px; font-weight: 800; letter-spacing: 3.5px; color: #0a4f3a; line-height: 1.3; margin: 3px 0 0;
     word-break: break-all; text-shadow: 0 1px 0 #fff, 0 3px 10px rgba(10,79,58,.18);
   }
-  .code-flourish { display: flex; align-items: center; justify-content: center; gap: 7px; direction: ltr; margin: 5px 0 13px; color: #c9a227; }
+  .code-flourish { display: flex; align-items: center; justify-content: center; gap: 7px; direction: ltr; margin: 4px 0 11px; color: #c9a227; }
   .code-flourish i { display: block; width: 74px; height: 1.6px; background: linear-gradient(90deg, rgba(201,162,39,0), #c9a227); }
   .code-flourish i:last-child { background: linear-gradient(90deg, #c9a227, rgba(201,162,39,0)); }
   .code-flourish b { font-size: 11px; font-weight: 400; line-height: 1; }
@@ -67,17 +74,34 @@
   }
   .open-app span { font-family: Georgia, serif; font-size: 12.5px; font-weight: 700; letter-spacing: .8px; }
   /* ——— Plain note line under the strip: designed type, no box ——— */
-  .note { text-align: center; margin: 16px 2px 0; max-width: 480px; }
+  .note { text-align: center; margin: 12px 2px 0; max-width: 480px; }
   .note .ur { font-size: 15.5px; font-weight: 700; line-height: 2; color: #fff3cf; margin: 0; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
   .note .ur b { color: #ffe98f; font-size: 17px; }
   .note .en { direction: ltr; font-family: Georgia, serif; font-style: italic; font-size: 12.5px; letter-spacing: .4px; line-height: 1.55; color: rgba(255,238,194,.85); margin: 4px 0 0; }
   .note .en b { color: #ffe98f; font-style: normal; }
+  /* ——— Share row: one compact line of gold-ringed round buttons ——— */
+  .share { display: flex; justify-content: center; align-items: center; gap: 7px; direction: ltr; margin: 13px 0 0; }
+  .share a, .share button {
+    width: 38px; height: 38px; flex: none; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1.5px solid #e7c65a; background: rgba(231,198,90,.13); color: #ffe98f;
+    cursor: pointer; text-decoration: none; padding: 0;
+    box-shadow: 0 3px 9px rgba(0,0,0,.35);
+  }
+  .share a:active, .share button:active { filter: brightness(1.35); }
+  .share svg { width: 19px; height: 19px; fill: currentColor; display: block; }
+  .share .at { font-family: Georgia, serif; font-size: 19px; font-weight: 800; line-height: 1; }
   @media (max-width: 430px) {
     .brand .name { font-size: 13.5px; letter-spacing: 1.3px; }
     .brand img { width: 34px; height: 34px; }
     .actions { flex-direction: column; }
     .copy-btn, .open-app { width: 100%; }
     .code { font-size: 29px; letter-spacing: 2.4px; }
+    .strip .mascot { width: 84px; height: 84px; }
+    .share { gap: 5px; margin-top: 11px; }
+    .share a, .share button { width: 33px; height: 33px; }
+    .share svg { width: 16.5px; height: 16.5px; }
+    .share .at { font-size: 16.5px; }
   }
   [hidden] { display: none !important; }
 </style>
@@ -91,6 +115,7 @@
   <div class="brand-line"><i></i><b>✦</b><i></i></div>
 
   <div class="strip">
+    <img class="mascot" src="mascot.webp" alt="Fanoos e Ilm" />
     <div id="codeBlock">
       <p class="title">فانوسِ علم</p>
       <div class="lab">آپ کا دعوتی کوڈ — <span>Your invite code</span></div>
@@ -113,6 +138,17 @@
     <p class="en">Enter this code in the app's Settings — complete the Daily Challenge and both of you earn <b>5,000 coins</b>.</p>
   </div>
 
+  <div class="share" id="shareRow" aria-label="Share this invite">
+    <a id="shWa" href="#" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 11.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+    <a id="shFb" href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a id="shMsg" href="#" target="_blank" rel="noopener" title="Messenger" aria-label="Messenger"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.498 1.743 6.615 4.468 8.655V24l4.089-2.243c1.093.302 2.253.465 3.443.465 6.627 0 12-4.974 12-11.111S18.627 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26 6.559-5.603 3.129 3.26 5.889-3.26-6.559 5.603z"/></svg></a>
+    <a id="shIg" href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+    <a id="shTh" href="#" target="_blank" rel="noopener" title="Threads" aria-label="Threads"><span class="at">@</span></a>
+    <a id="shX" href="#" target="_blank" rel="noopener" title="X" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a>
+    <a id="shSms" href="#" title="SMS" aria-label="SMS"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+    <button id="shCopy" type="button" title="Copy invite" aria-label="Copy invite"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></button>
+  </div>
+
 <script>
 (function () {
   var m = /[?&]c=([A-Za-z0-9-]{4,24})/.exec(location.search || "");
@@ -126,6 +162,37 @@
     + "#Intent;scheme=https;package=com.amwrites.fanoos;S.browser_fallback_url="
     + encodeURIComponent(landing) + ";end";
   document.getElementById("openAppBtn").setAttribute("href", intent);
+  /* ——— Share row: every target carries the code + this page's link ——— */
+  var shareText = code
+    ? "فانوسِ علم کھیلیں اور 5,000 سکے جیتیں! میرا دعوتی کوڈ: " + code + " — کوڈ سیٹنگز میں لکھیں اور روزانہ چیلنج مکمل کریں، دونوں کو 5,000 سکے ملیں گے۔\n" + landing
+    : "فانوسِ علم — علم سے روشنی تک! میرے ساتھ کھیلیں:\n" + base;
+  var enc = encodeURIComponent(shareText), encLink = encodeURIComponent(landing);
+  function setHref(id, url) { var el = document.getElementById(id); if (el) el.setAttribute("href", url); }
+  setHref("shWa", "https://wa.me/?text=" + enc);
+  setHref("shFb", "https://www.facebook.com/sharer/sharer.php?u=" + encLink + "&quote=" + enc);
+  setHref("shMsg", "https://www.messenger.com/");
+  setHref("shIg", "https://www.instagram.com/");
+  setHref("shTh", "https://www.threads.net/intent/post?text=" + enc);
+  setHref("shX", "https://twitter.com/intent/tweet?text=" + enc);
+  setHref("shSms", "sms:?body=" + enc);
+  var shCopy = document.getElementById("shCopy");
+  if (shCopy) shCopy.addEventListener("click", function () {
+    var origIcon = shCopy.innerHTML;
+    function done() {
+      shCopy.innerHTML = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+      setTimeout(function () { shCopy.innerHTML = origIcon; }, 2400);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(shareText).then(done, function () { fb2(); });
+    } else fb2();
+    function fb2() {
+      var ta = document.createElement("textarea");
+      ta.value = shareText; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  });
   if (code) {
     document.getElementById("codeText").textContent = code;
     var btn = document.getElementById("copyBtn");
