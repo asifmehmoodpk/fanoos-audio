@@ -1,0 +1,17 @@
+{
+ "version": 29,
+ "count": 5300,
+ "categories": {
+  "quran": 884,
+  "seerah": 849,
+  "ibadat": 848,
+  "anbiya": 848,
+  "general": 848,
+  "ayat": 1023
+ },
+ "sha256": "0897c740568b4e3c94af80c30199adec4d4da4026b542b812e5da95fb291f51d",
+ "signature": "C2F2W06i5TZlKvDvPSmCW/MrK3dlwYcJAE8dnBppKYVUUDL4GovAI/qVRhrTqU5NvOJbclKhE2TmuYc70EIhBA==",
+ "algo": "Ed25519",
+ "sigInput": "sha256hex-ascii",
+ "updatedAt": "2026-11-06"
+}
